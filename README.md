@@ -6,3 +6,4 @@ Hi there! I'm Melihsah. I started a new challenge for my web skills. Let's begin
 | ID  | Title         | Demo        |
 | ----|---------------|-------------|
 | 01  | expanding info cards        | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/expanding-info-cards/) |
+| 02  | simple stepper        | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/simple-form-stepper/) |
