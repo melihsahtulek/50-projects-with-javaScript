@@ -1,0 +1,14 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  --font-300: 300;
+  --font-400: 400;
+  --font-500: 500;
+  --font-600: 600;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
