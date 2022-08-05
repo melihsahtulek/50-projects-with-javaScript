@@ -1,0 +1,32 @@
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #edf2f4;
+  overflow: hidden;
+}
+
+#container .animated-box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #ef233c;
+  border-radius: 1rem;
+  color: #edf2f4;
+}
+
+#container .animated-box:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+#container .animated-box:nth-of-type(2) {
+  width: 600px;
+  background-color: green;
+  transform: translateX(calc(680px + 50%));
+}
