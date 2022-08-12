@@ -6,7 +6,8 @@ Hi there! I'm Melihsah. I started a new challenge for my web skills. Let's begin
 | ID  | Title         | Demo        |
 | ----|---------------|-------------|
 | 01  | expanding info cards        | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/expanding-info-cards/) |
-| 02  | simple stepper        | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/simple-form-stepper/) |
+| 02  | simple stepper              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/simple-form-stepper/)  |
 | 03  | hamburger navigation        | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/hamburger-navigation/) |
 | 04  | scroll animation box        | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/scroll-animation-box/) |
-| 05  | split-landing-page        | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/split-landing-page/) |
+| 05  | split-landing-page          | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/split-landing-page/)   |
+| 06  | event-keycodes              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/event-keycodes/)       |

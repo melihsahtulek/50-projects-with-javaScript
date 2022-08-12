@@ -1,0 +1,50 @@
+#container {
+  min-height: 100vh;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container .title {
+  width: 400px;
+  height: 75px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #888888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-300);
+  text-transform: capitalize;
+}
+
+#container .result-boxes {
+  display: flex;
+}
+
+#container .result-boxes > .box {
+  background-color: #ffffff;
+  height: 75px;
+  border-radius: 3px;
+  border: 1px solid #888888;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container .result-boxes > .box h4 {
+  font-weight: var(--font-300);
+  font-size: 1rem;
+}
+
+#container .result-boxes > .box h3 {
+  font-weight: var(--font-600);
+  font-size: 1.35rem;
+}
+
+#container .result-boxes > .box:not(:first-of-type) {
+  margin-left: 20px;
+}
