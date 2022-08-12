@@ -1,0 +1,29 @@
+#container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3330e4;
+}
+
+#container .boxes {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  flex-wrap: wrap;
+}
+
+#container .boxes .box {
+  padding: 1rem;
+  text-align: center;
+}
+
+#container .boxes .box h3 {
+  font-size: 3rem;
+  font-weight: var(--font-600);
+}
+
+#container .boxes .box h4 {
+  font-size: 1.25rem;
+  font-weight: var(--font-500);
+}
