@@ -1,0 +1,84 @@
+#container {
+  min-height: 100vh;
+  display: flex;
+}
+
+#container > div {
+  transition: all 0.5s;
+}
+
+#container > div {
+  background: url("https://picsum.photos/1000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container .left-content::before {
+  content: "";
+  background-color: #ff1e00;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.55;
+}
+
+#container > div h2 {
+  color: #ffffff;
+  font-size: 4rem;
+  position: relative;
+  z-index: 1;
+  font-weight: var(--font-600);
+}
+
+#container > div button {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  font-weight: var(--font-600);
+}
+
+#container .right-content::before {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.55;
+}
+
+#container > div:hover {
+  flex: 1;
+  transition: all 0.5s;
+}
+
+@media (min-width: 768px) {
+  #container > div {
+    flex: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    flex-wrap: wrap;
+  }
+  #container > div {
+    min-width: 100%;
+  }
+}
