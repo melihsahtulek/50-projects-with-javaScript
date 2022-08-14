@@ -12,3 +12,5 @@ Hi there! I'm Melihsah. I started a new challenge for my web skills. Let's begin
 | 05  | split landing page          | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/split-landing-page/)   |
 | 06  | event keycodes              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/event-keycodes/)       |
 | 07  | info counter                | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/info-counter/)         |
+| 08  | drawing app                 | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/drawing-app/)          |
+

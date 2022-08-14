@@ -11,19 +11,35 @@ window.addEventListener("load", () => {
     drawing: false,
     color: "#000000",
     brushSize: 10,
+    prevX: 0,
+    prevY: 0,
   };
 
   canvas.addEventListener("mousedown", (e) => {
     console.log("MouseDown!");
     drawObj.drawing = true;
+    drawObj.prevX = e.offsetX;
+    drawObj.prevY = e.offsetY;
   });
 
   canvas.addEventListener("mousemove", (e) => {
     if (drawObj.drawing) {
       console.log("MouseMove");
+      ctx.beginPath();
+      ctx.arc(e.offsetX, e.offsetY, drawObj.brushSize, 0, Math.PI * 2);
       ctx.fillStyle = drawObj.color;
-      ctx.fillRect(e.clientX, e.clientY, drawObj.brushSize, drawObj.brushSize);
       ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(drawObj.prevX, drawObj.prevY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.strokeStyle = drawObj.color;
+      ctx.lineWidth = drawObj.brushSize * 2;
+      ctx.lineCap = "round";
+      ctx.stroke();
+
+      drawObj.prevX = e.offsetX;
+      drawObj.prevY = e.offsetY;
     }
   });
 
