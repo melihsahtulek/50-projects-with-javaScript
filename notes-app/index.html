@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>project-11 | @melihsahtulek</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body>
+  <body bgcolor="#e5e5e5">
+    <div id="container">
+      <div class="note">
+        <div class="header">
+          <input type="text" name="note_title" value="first note" />
+          <button type="button">
+            <i class="bx bx-edit"></i>
+          </button>
+          <button type="button">
+            <i class="bx bx-trash"></i>
+          </button>
+        </div>
+        <textarea name="note_textarea">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis delectus excepturi earum ratione accusantium! Soluta sint voluptatum aperiam atque vero molestias esse et id hic autem earum, dolores repudiandae.
+        </textarea>
+      </div>
+
+      <button type="button" class="create-new-note-btn"><i class="bx bx-plus"></i> create new note</button>
+    </div>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
