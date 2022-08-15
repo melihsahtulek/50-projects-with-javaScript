@@ -14,5 +14,8 @@ Hi there! I'm Melihsah. I started a new challenge for my web skills. Let's begin
 | 07  | info counter                | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/info-counter/)         |
 | 08  | drawing app                 | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/drawing-app/)          |
 | 09  | sticky navbar               | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/sticky-navbar/)        |
+| 10  | toast notification              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/toast-notification/)        |
+| 11  | notes app              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/notes-app/)        |
+
 
 
