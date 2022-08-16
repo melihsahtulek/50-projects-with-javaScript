@@ -32,6 +32,10 @@
   text-transform: capitalize;
 }
 
+#container .note .header input::placeholder {
+  color: #ffffff;
+}
+
 #container .note .header button {
   background-color: #ffffff;
   border: none;
@@ -76,4 +80,21 @@
 .create-new-note-btn i {
   font-size: 1.4rem;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .note {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .note .header {
+    flex-wrap: wrap;
+  }
+  .note .header input {
+    min-width: 100%;
+    margin-top: 1rem;
+    order: 1;
+  }
 }
