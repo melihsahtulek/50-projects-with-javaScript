@@ -19,25 +19,29 @@
   background-color: #ef233c;
   padding: 1rem;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
 }
 
 #container .note .header input {
-  max-width: 170px;
-  margin-right: auto;
+  width: 100%;
   border: none;
   outline: none;
-  background-color: transparent;
   color: #ffffff;
+  background-color: transparent;
   font-weight: var(--font-600);
   text-transform: capitalize;
+  font-size: 1.1rem;
 }
 
 #container .note .header input::placeholder {
   color: #ffffff;
 }
 
-#container .note .header button {
+#container .note .header .buttons {
+  display: flex;
+}
+
+#container .note .header .buttons button {
   background-color: #ffffff;
   border: none;
   padding: 0.5rem;
@@ -47,7 +51,7 @@
   cursor: pointer;
 }
 
-#container .note .header button:not(:last-of-type) {
+#container .note .header .buttons button:not(:last-of-type) {
   margin-right: 10px;
 }
 
@@ -93,6 +97,7 @@
   .note .header {
     flex-wrap: wrap;
   }
+
   .note .header input {
     min-width: 100%;
     margin-top: 1rem;
