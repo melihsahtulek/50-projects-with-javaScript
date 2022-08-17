@@ -7,8 +7,7 @@ window.addEventListener("load", () => {
       if (localStorage.getItem("notes") === null) {
         localStorage.setItem("notes", JSON.stringify([]));
       } else {
-        const data = JSON.parse(localStorage.getItem("notes"));
-        writeNotesToHtml(data);
+        writeNotesToHtml(getNotesFromLs());
       }
     }
   };
@@ -44,8 +43,8 @@ window.addEventListener("load", () => {
   };
 
   const generatePrimaryKey = () => {
+    const data = getNotesFromLs();
     let id = 0;
-    const data = JSON.parse(localStorage.getItem("notes"));
     if (data.length === 0) {
       id = 1;
     } else {
@@ -62,7 +61,7 @@ window.addEventListener("load", () => {
   };
 
   const addNewNoteToLs = (id) => {
-    const data = JSON.parse(localStorage.getItem("notes"));
+    const data = getNotesFromLs();
     data.push({
       id: id,
       title: "Unnamed Note",
@@ -83,30 +82,33 @@ window.addEventListener("load", () => {
 
   const writeNotesToHtml = (data) => {
     for (const note of data) {
-      container.insertAdjacentHTML(
-        "beforeend",
-        `
-        <div class="note">
-          <div class="header">
-            <input type="text" name="note_title" placeholder="note title" value=${note.title} data-id=${note.id} />
-            <button type="button" data-id=${note.id}>
-              <i class="bx bx-edit"></i>
-            </button>
-            <button type="button" data-id=${note.id}>
-              <i class='bx bxs-save'></i>
-            </button>
-            <button type="button" data-id=${note.id}>
-              <i class="bx bx-trash"></i>
-            </button>
+      if (!note.isSaved) {
+        container.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div class="note">
+            <div class="header">
+              <input type="text" name="note_title" placeholder="note title" value=${note.title} data-id=${note.id} />
+              <button type="button" data-id=${note.id}>
+                <i class="bx bx-edit"></i>
+              </button>
+              <button type="button" data-id=${note.id} name="save_btn">
+                <i class='bx bxs-save'></i>
+              </button>
+              <button type="button" data-id=${note.id}>
+                <i class="bx bx-trash"></i>
+              </button>
+            </div>
+            <textarea name="note_textarea" data-id=${note.id}>
+              ${note.note}
+            </textarea>
           </div>
-          <textarea name="note_textarea" data-id=${note.id}>
-            ${note.note}
-          </textarea>
-        </div>
-      `
-      );
+        `
+        );
+      } else {
+        removeNoteFromLs(note.id);
+      }
     }
-
     removeWhiteSpaceIndents();
   };
 
@@ -114,6 +116,20 @@ window.addEventListener("load", () => {
     document.querySelectorAll("textarea").forEach((element) => {
       element.value = element.value.replace(/\s{2,}/gi, "");
     });
+  };
+
+  const getNotesFromLs = () => {
+    return JSON.parse(localStorage.getItem("notes"));
+  };
+
+  const removeNoteFromLs = (id) => {
+    console.log(id);
+  };
+
+  /* BUTTON EVENTS */
+
+  const initButtonEvents = () => {
+    console.log("ready!");
   };
 
   createNewNoteBtn.addEventListener("click", createNewNote);
