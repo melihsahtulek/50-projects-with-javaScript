@@ -67,12 +67,6 @@ window.addEventListener("load", () => {
             <div class="header">
               <input type="text" name="note_title" autocomplete="off" value="${note.title}" />
               <div class="buttons">
-                <button type="button" data-id=${note.id}>
-                  <i class='bx bx-italic'></i>
-                </button>
-                <button type="button" data-id=${note.id}>
-                  <i class='bx bx-bold'></i>
-                </button>
                 <button type="button" data-id=${note.id} name="edit_btn">
                   <i class="bx bx-edit"></i>
                 </button>
@@ -133,7 +127,10 @@ window.addEventListener("load", () => {
 
     data[index].title = noteTitles[index].value;
     data[index].note = noteTextareas[index].value;
-    data[index].isEditable = note.isEditable;
+
+    if (note !== undefined) {
+      data[index].isEditable = note.isEditable;
+    }
 
     localStorage.setItem("notes", JSON.stringify(data));
     writeNotesToHtml(data);
