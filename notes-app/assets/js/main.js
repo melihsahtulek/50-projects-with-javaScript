@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
     const data = getNotesFromLs();
     data.push({
       id: id,
-      title: `unnamed note`,
+      title: "unnamed note",
       note: "",
       isEditable: true,
     });
@@ -65,7 +65,7 @@ window.addEventListener("load", () => {
         `
           <div class="note">
             <div class="header">
-              <input type="text" name="note_title" placeholder="note title" value=${note.title} data-id=${note.id} />
+              <input type="text" name="note_title" autocomplete="off" value="${note.title}" />
               <div class="buttons">
                 <button type="button" data-id=${note.id}>
                   <i class='bx bx-italic'></i>
@@ -119,29 +119,39 @@ window.addEventListener("load", () => {
     writeNotesToHtml(data);
   };
 
-  const saveNoteToLs = (id) => {
-    let value = "";
+  const saveNoteToLs = (id, note) => {
+    let index = null;
     const noteTextareas = document.querySelectorAll("[name=note_textarea]");
+    const noteTitles = document.querySelectorAll("[name=note_title]");
     const data = getNotesFromLs();
 
-    noteTextareas.forEach((textarea) => {
-      if (parseInt(textarea.getAttribute("data-id")) === parseInt(id)) {
-        value = textarea.value;
+    data.forEach((_, i) => {
+      if (_.id === parseInt(id)) {
+        index = i;
       }
     });
 
-    data.forEach((note) => {
-      if (note.id === parseInt(id)) {
-        note.note = value;
-      }
-    });
+    data[index].title = noteTitles[index].value;
+    data[index].note = noteTextareas[index].value;
+    data[index].isEditable = note.isEditable;
 
     localStorage.setItem("notes", JSON.stringify(data));
     writeNotesToHtml(data);
   };
 
   const editNoteToLs = (id) => {
-    console.log(id);
+    const data = getNotesFromLs();
+
+    data.forEach((note) => {
+      if (note.id === parseInt(id)) {
+        if (note.isEditable) {
+          note.isEditable = false;
+        } else {
+          note.isEditable = true;
+        }
+        saveNoteToLs(id, note);
+      }
+    });
   };
 
   /* BUTTON EVENTS */
