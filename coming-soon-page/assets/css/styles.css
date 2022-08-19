@@ -1,0 +1,80 @@
+:root {
+  --white: #ffffff;
+  --black: #3a3a3a;
+  --border-r: 4px;
+}
+
+#container {
+  height: 100vh;
+  background: hsla(353, 86%, 54%, 1);
+  background: linear-gradient(360deg, hsla(353, 86%, 54%, 1) 0%, hsla(0, 100%, 68%, 1) 100%);
+  background: -moz-linear-gradient(360deg, hsla(353, 86%, 54%, 1) 0%, hsla(0, 100%, 68%, 1) 100%);
+  background: -webkit-linear-gradient(360deg, hsla(353, 86%, 54%, 1) 0%, hsla(0, 100%, 68%, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+#container header h1 {
+  font-weight: var(--font-500);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+#container header .social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+#container header .social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+#container .countdown {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#container .countdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+#container .countdown div h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: var(--font-500);
+  background-color: var(--white);
+  border-radius: var(--border-r);
+  color: var(--black);
+}
+
+#container .countdown div span {
+  color: var(--white);
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: var(--font-600);
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+}
