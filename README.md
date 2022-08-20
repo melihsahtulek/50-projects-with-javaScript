@@ -16,7 +16,7 @@ Hi there! I'm Melihsah. I started a new challenge for my web skills. Let's begin
 | 09  | sticky navbar               | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/sticky-navbar/)        |
 | 10  | toast notification              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/toast-notification/)        |
 | 11  | notes app              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/notes-app/)        |
-| 12  | coming soon page              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/coming-soon-page/)        |
+| 12  | countdown timer              | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/countdown-timer/)        |
 
 
 
