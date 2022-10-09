@@ -20,3 +20,7 @@ Hi there! I'm Melihsah. I started a new challenge for my web skills. Let's begin
 | 13  | number find game             | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/basic-number-game/)        |
 | 14  | book store web app            | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/book-store-web-app/)        |
 | 15  | password generator          | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/password-generator-web-app/)        |
+| 16  | quiz web app          | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/quiz-web-app/)        |
+| 17  | random color generator          | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/random-color-generator/)        |
+| 18  | recipe web app          | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/recipe-web-app/)        |
+| 19  | simple regex form          | [demo](https://melihsahtulek.github.io/50-projects-with-javaScript/simple-regex-form/)        |
