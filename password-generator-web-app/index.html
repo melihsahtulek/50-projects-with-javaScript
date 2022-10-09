@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="title">
+          <h1>Password Generator</h1>
+          <h5>
+            <a href="http://melihsahtulek.com/"> &copy; Dev. MT</a>
+          </h5>
+        </div>
+        <div class="options">
+          <div>
+            <input type="number" placeholder="Length : min = 5 | max = 12" min="5" max="12" id="len" />
+          </div>
+          <div>
+            <input type="checkbox" id="special_characters" name="special_characters" />
+            <label for="special_characters">includes ( e.g. _-*+@#$% )</label>
+          </div>
+          <div>
+            <input type="checkbox" id="numbers" name="numbers" />
+            <label for="numbers">includes ( e.g. 01234 )</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lower_cases" name="lower_cases" />
+            <label for="lower_cases">includes ( e.g. abcde )</label>
+          </div>
+          <div>
+            <input type="checkbox" id="upper_cases" name="upper_cases" />
+            <label for="upper_cases">includes ( e.g. ABCDE )</label>
+          </div>
+        </div>
+        <div class="generate">
+          <button type="button" id="genBtn">generate password</button>
+        </div>
+        <div class="result">
+          <input type="text" name="result" id="resultInp" readonly />
+          <button type="button" id="copyBtn">Copy</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
