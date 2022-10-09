@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0" />
+    <title>quiz app</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>mt-quiz</h1>
+      </header>
+      <div class="timer">
+        <h3 id="timerTitle"></h3>
+      </div>
+      <section>
+        <div class="qBox" data-question-id="">
+          <div class="qBoxHeader">
+            <h3 class="qBoxHeaderTitle"></h3>
+          </div>
+          <div class="options"></div>
+          <div class="qBoxFooter">
+            <h3 class="questionN"></h3>
+            <div class="qEnd">
+              <button type="button" id="finishTheQuizBtn">bitir</button>
+              <button type="button" id="previousQuestionBtn">
+                <span class="material-icons">west</span>
+              </button>
+              <button type="button" id="nextQuestionBtn">
+                <span class="material-icons">east</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="finishBoard">
+          <div class="board">
+            <div class="boardHeader">
+              <h3>Quiz Sonucu</h3>
+            </div>
+            <ul>
+              <li>
+                <span>toplam soru</span>
+                <span id="totalQuestion"></span>
+              </li>
+              <li>
+                <span>doğru sayısı</span>
+                <span id="totalCorrect"></span>
+              </li>
+              <li>
+                <span>yanlış sayısı</span>
+                <span id="totalWrong"></span>
+              </li>
+              <li>
+                <span>boş sayısı</span>
+                <span id="totalEmpty"></span>
+              </li>
+              <li>
+                <span>puan</span>
+                <span id="finalScore"></span>
+              </li>
+            </ul>
+            <div class="boardFooter">
+              <button type="button" id="newQuizBtn">Yeniden çöz</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <h3>made with <span class="material-icons">favorite</span> <a href="https://melihsahtulek.com/">Melihşah Tülek</a></h3>
+      </footer>
+    </main>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

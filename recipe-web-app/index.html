@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recipe app</title>
+    <link rel="stylesheet" href="./app.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="center">
+          <div class="left">
+            <h1>food & recipe</h1>
+            <div class="searchContainer">
+              <input type="text" name="searchFood" id="searchFoodID" placeholder="food name" />
+              <button type="button" id="searchBtn"><span class="material-icons">search</span></button>
+            </div>
+            <div class="searchResult"></div>
+            <h2>OR</h2>
+            <button type="button" id="randBtn">get random food</button>
+          </div>
+          <div class="right">
+            <div class="imgContainer">
+              <img src="images/hero__banner.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <section id="result"></section>
+      <footer>
+        <h3>
+          made with <span class="material-icons">favorite</span> <a href="https://melihsahtulek.com/">Melihşah Tülek</a>
+        </h3>
+      </footer>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

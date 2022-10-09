@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inputs</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form action="javascript:void(0)" name="signUpform" id="signUpform">
+      <div class="inpContainer">
+        <label for="fullName">full name</label>
+        <input type="text" id="fullName" name="fullName" autocomplete="off" />
+        <span class="errorMessage" data-inp-id="fullName">Error Message*</span>
+      </div>
+
+      <div class="inpContainer">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="off" />
+        <span class="errorMessage" data-inp-id="username">Error Message*</span>
+      </div>
+
+      <div class="inpContainer">
+        <label for="dateOfBirth">date of birth</label>
+        <input type="text" placeholder="dd/mm/yyyy" id="dateOfBirth" name="dateOfBirth" autocomplete="off" />
+        <span class="errorMessage" data-inp-id="dateOfBirth">Error Message*</span>
+      </div>
+
+      <div class="inpContainer">
+        <label for="emailAddress">e-mail address</label>
+        <input type="text" placeholder="example@example.com" id="emailAddress" name="emailAddress" autocomplete="off" />
+        <span class="errorMessage" data-inp-id="emailAddress">Error Message*</span>
+      </div>
+
+      <div class="inpContainer">
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" />
+        <span class="errorMessage" data-inp-id="password">Error Message*</span>
+      </div>
+
+      <div class="inpContainer">
+        <label for="confirmPassword">confirm password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" />
+        <span class="errorMessage" data-inp-id="confirmPassword">Error Message*</span>
+      </div>
+
+      <div class="inpContainer">
+        <button type="submit" class="submitBtn">Sign Up</button>
+      </div>
+    </form>
+
+    <h3>simple valid form by <a href="http://melihsahtulek.com/">MT</a></h3>
+
+    <!--
+
+      <div class="inpContainer">
+      <label for=""></label>
+      <input type="text" id="" name="" />
+      <span class="errorMessage" data-inp-id="">Error Message*</span>
+    </div>
+
+    -->
+
+    <script src="./main.js"></script>
+  </body>
+</html>

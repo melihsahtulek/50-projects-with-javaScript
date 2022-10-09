@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap");
+
+:root {
+  --red: #f03434;
+  --green: #26a65b;
+  --white: #f2f1ef;
+  --black: #1a1a1a;
+  --blue: #4d05e8;
+}
+
+html {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 17px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: inherit;
+  font-weight: 400;
+}
+
+main {
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+main header h1 {
+  color: var(--white) !important;
+  font-weight: 300 !important;
+  font-size: 2.1rem;
+}
+
+main .timer {
+  margin-top: 1rem;
+  padding: 10px 15px;
+  background-color: var(--red);
+  width: fit-content;
+  border-radius: 5px;
+}
+
+main .timer h3 {
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+main section {
+  flex: 1;
+}
+
+.qBox {
+  border: 1px solid var(--white);
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.qBox .qBoxHeader {
+  color: var(--black);
+  border-bottom: 1px solid var(--white);
+  padding: 15px;
+}
+
+.qBox .qBoxHeader h3 {
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: lowercase;
+}
+
+.qBox .qBoxHeader h3::first-letter {
+  text-transform: uppercase;
+}
+
+.qBox .options {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.qBox .options .option {
+  background-color: var(--white);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.qBox .options .option span {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.qBox .options .option:hover {
+  background-color: var(--blue) !important;
+}
+
+.qBox .options .option:hover span {
+  color: var(--white) !important;
+}
+
+.yourAnswer {
+  background-color: var(--blue) !important;
+}
+
+.yourAnswer span {
+  color: var(--white) !important;
+}
+
+.correctAnswer span {
+  color: var(--white) !important;
+}
+
+.qBox .qBoxFooter {
+  border-top: 1px solid var(--white);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qBox .qBoxFooter .qEnd {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+}
+
+.qBox .qBoxFooter .qEnd button {
+  all: unset;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 12px;
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.qBox .qBoxFooter .qEnd button:nth-of-type(1) {
+  background-color: var(--red) !important;
+}
+
+.finishBoard {
+  border: 1px solid var(--white);
+  margin-top: 1rem;
+  max-width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+}
+
+@media (max-width: 469px) {
+  .finishBoard {
+    max-width: 100%;
+  }
+
+  html {
+    font-size: 16px;
+  }
+}
+
+.finishBoard .boardHeader {
+  background-color: var(--blue);
+  padding: 10px 15px;
+}
+
+.finishBoard .boardHeader h3 {
+  color: var(--white);
+}
+
+.finishBoard .board ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.finishBoard .board ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.finishBoard .board ul li:not(:last-of-type) {
+  border-bottom: 1px solid var(--white);
+}
+
+.finishBoard .board ul li span:nth-of-type(1) {
+  font-weight: 900;
+}
+
+.finishBoard .boardFooter {
+  border-top: 1px solid var(--white);
+  padding: 15px;
+}
+
+.finishBoard .boardFooter button {
+  border: 0;
+  background-color: unset;
+  font-weight: inherit;
+  font-family: inherit;
+  width: 100%;
+  background-color: var(--green);
+  border-radius: 5px;
+  height: 45px;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  padding: 15px 0;
+  border-radius: 5px;
+}
+
+footer h3 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--white);
+}
+
+footer h3 span {
+  color: var(--red);
+}
+
+footer h3 a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+* {
+  user-select: none;
+}
