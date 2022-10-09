@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+
+:root {
+  --yellow: #f9a826;
+  --black: #2a2a2a;
+  --red: #c70039;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#container header {
+  background-color: var(--yellow);
+  display: flex;
+  padding: 0 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#container header h1 {
+  color: var(--black);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#container header .wishListIcon {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  width: 65px;
+  cursor: pointer;
+}
+
+#container header .wishListIcon {
+  position: relative;
+  right: -1.5rem;
+}
+
+#container header .wishListIcon span {
+  font-size: 40px;
+  color: var(--red);
+}
+
+.heroSection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: var(--red);
+  padding: 1rem 0;
+}
+
+.heroSection .hero {
+  width: 1024px;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .heroSection .hero {
+    width: 100%;
+  }
+}
+
+.heroSection .hero .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.heroSection .hero .left span {
+  margin-top: 10px;
+  background-color: var(--yellow);
+  width: 75px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-size: 32px;
+  color: var(--black);
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  .heroSection .hero .left {
+    padding-right: 10px;
+  }
+}
+
+.heroSection .hero .left .searchArea {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.heroSection .hero .left .searchArea label {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.heroSection .hero .left .searchArea input {
+  height: 45px;
+  max-width: 450px;
+  outline: unset;
+  border: unset;
+  font-size: 1rem;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.heroSection .hero .right {
+  width: 20vmax;
+  height: 20vmax;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .heroSection .hero .right {
+    min-width: 25vmax;
+    min-height: 25vmax;
+  }
+}
+
+@media (max-width: 469px) {
+  .heroSection .hero .right {
+    margin-right: -50px;
+  }
+}
+
+.heroSection .hero .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -webkit-animation: moveHeroImage 5s infinite; /* Safari 4+ */
+  -moz-animation: moveHeroImage 5s infinite; /* Fx 5+ */
+  -o-animation: moveHeroImage 5s infinite; /* Opera 12+ */
+  animation: moveHeroImage 5s infinite; /* IE 10+, Fx 29+ */
+  position: relative;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes moveHeroImage {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@-moz-keyframes moveHeroImage {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@-o-keyframes moveHeroImage {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@keyframes moveHeroImage {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.latestProducts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.latestProducts .center {
+  width: 1024px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.latestProducts .center .card {
+  padding: 10px;
+  width: 25%;
+}
+
+@media (max-width: 1024px) {
+  .latestProducts .center {
+    margin: 0;
+  }
+  .latestProducts .center .card {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 469px) {
+  .latestProducts .center .card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .latestProducts .center .card {
+    width: 100%;
+  }
+}
+
+.latestProducts .center .card .item {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.latestProducts .center .card .item .image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.latestProducts .center .card .item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.latestProducts .center .card .item .title {
+  padding: 0 10px;
+  padding-bottom: 0;
+  height: 50px;
+  overflow: hidden;
+}
+
+.latestProducts .center .card .item .title h5 {
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.latestProducts .center .card .item .price {
+  padding: 0px 10px;
+}
+
+.latestProducts .center .card .item .price h5 {
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.latestProducts .center .card .item .buttons {
+  display: flex;
+  padding-top: 10px;
+}
+
+.latestProducts .center .card .item .buttons a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 32px;
+}
+
+.latestProducts .center .card .item .buttons a:nth-child(1) {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.latestProducts .center .card .item .buttons a:nth-child(2) {
+  background-color: var(--red);
+  color: #ffffff;
+}
+
+footer {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+}
+
+footer h3 {
+  font-weight: 400;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+footer h3 span {
+  color: var(--red);
+}
+
+footer h3 a {
+  color: var(--black);
+}
+
+#wishListSide {
+  width: 330px;
+  height: 100%;
+  position: fixed;
+  background-color: var(--yellow);
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+#wishListSide .wishListHeader {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: var(--red);
+}
+
+#wishListSide .wishListHeader h3 {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+#wishListSide .wishListHeader span {
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.wishListItemContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: calc(100% - 65px);
+  overflow: auto;
+  padding-right: 5px;
+}
+
+.wishListItemContainer .wItem {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.wishListItemContainer .wItem .wItemImage {
+  width: 75px;
+  height: 75px;
+}
+
+.wishListItemContainer .wItem .wItemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wItemTitle {
+  flex: 1;
+  word-break: break-all;
+}
+
+.wItemTitle h3 {
+  font-weight: 400;
+}
+
+.wItemRemove {
+  width: 40px;
+  background-color: #fff;
+  max-height: 40px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--red);
+}
+
+.detail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 1rem 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.detail .detailContainer {
+  width: 1024px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.detailRight {
+  flex: 1;
+  padding-left: 15px;
+}
+
+.detailRight ul {
+  width: 100%;
+  list-style: none;
+}
+
+.detailRight ul li {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-bottom: 5px;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+}
+
+.detailRight ul li span {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 469px) {
+  .detailRight ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.detailRight ul li span:first-child {
+  font-weight: 900;
+}
+
+.detailRight p {
+  margin-top: 2rem;
+}
+
+.detailLeft .buttons {
+  display: flex;
+  padding-top: 10px;
+}
+
+.detailLeft .buttons a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 32px;
+}
+
+.detailLeft .buttons a:nth-child(1) {
+  background-color: var(--red);
+  color: #ffffff;
+}
+
+.detailLeft .pdfLinks {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.detailLeft .pdfLinks a {
+  flex: 0.5;
+  background-color: var(--yellow);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--black);
+  font-weight: 900;
+  border-radius: 3px;
+  padding: 0 8px;
+}
+
+.detailRight .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.detailRight .stars span {
+  font-size: 32px;
+  color: var(--yellow);
+}
+
+.detailLeft h3 {
+  color: var(--black);
+  font-size: 1.3rem;
+}
+
+.detailLeft h4 {
+  color: var(--black);
+  font-size: 1rem;
+}
+
+.mobileBackBtn {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding-left: 1rem;
+  width: 100%;
+  background-color: var(--red);
+  margin-top: -1rem;
+  position: sticky !important;
+  top: 65px;
+}
+
+.mobileBackBtn span {
+  font-size: 33px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .detail .detailContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 469px) {
+  .detailLeft {
+    width: 100%;
+  }
+
+  .detailLeft .detailLeftImage {
+    display: flex;
+    justify-content: center;
+  }
+
+  .detailRight {
+    padding-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+#getNextPage {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  background-color: var(--red);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#getNextPage span {
+  font-size: 36px;
+  color: var(--yellow);
+}
+
+@media (max-width: 1024px) {
+  .latestProducts .center {
+    width: 100%;
+  }
+}
+
+.err_404 {
+  height: 60vh;
+  width: 100%;
+  background-image: url("./images/404.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

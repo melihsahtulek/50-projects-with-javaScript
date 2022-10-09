@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book store app</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <main id="container">
+      <header>
+        <h1>IT book's</h1>
+        <div class="wishListIcon">
+          <span class="material-icons">favorite</span>
+        </div>
+      </header>
+
+      <section class="detail">
+        <div class="mobileBackBtn"><span class="material-icons">arrow_back</span></div>
+        <div class="detailContainer"></div>
+      </section>
+
+      <footer>
+        <h3>
+          made with <span class="material-icons">favorite</span> <a href="https://melihsahtulek.com/">Melihşah Tülek</a>
+        </h3>
+      </footer>
+    </main>
+
+    <div id="wishListSide">
+      <div class="wishListHeader">
+        <h3>my wish list</h3>
+        <span class="material-icons closeTheWishList">close</span>
+      </div>
+
+      <div class="wishListItemContainer"></div>
+    </div>
+
+    <script src="./bookDetail.js"></script>
+  </body>
+</html>
